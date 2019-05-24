@@ -37,3 +37,4 @@ The JS file should:
 ##
 
 Have some fun with this and make it your own.
+Include lots of comments so that we can get a feel for your thought process while working through this task.
