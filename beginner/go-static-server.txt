@@ -1,0 +1,39 @@
+##
+# Static file server built in GO
+#
+#
+# Level -   Beginner
+# Time  -   1 - 2 Hours
+#
+#
+# Objective
+##
+
+This is designed to test your knowledge of an array of languages and techniques along with problem solving skills and creativity.
+
+##
+# Tasks
+##
+
+Create a simple GO server that serves 3 static files over port 8000 on localhost (127.0.0.1).
+
+    1) HTML file at the root path   (http://localhost:8000/)      Contains all the DOM (HTML) for the project
+    2) CSS file at /css             (http://localhost:8000/css)   Contains all CSS for the project
+    3) JS file at /js               (http://localhost:8000/js)    Contains all JS for the project
+
+The HTML file should:
+    1) Include the CSS and JS file
+    2) Include have a form with 2 inputs to send a someone a message
+        a) Name field
+        b) Message field 
+
+The JS file should:
+    1) Stop the form from submitting like normal
+    2) Get the values from the inputs
+    3) Display the name and message in the DOM on the page
+
+##
+# Notes
+##
+
+Have some fun with this and make it your own.
