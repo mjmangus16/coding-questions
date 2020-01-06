@@ -23,7 +23,7 @@ Create a simple GO server that serves 3 static files over port 8000 on localhost
 
 The HTML file should:
     1) Include the CSS and JS file
-    2) Include have a form with 2 inputs to send a someone a message
+    2) Include a form with 2 inputs to send a someone a message
         a) Name field
         b) Message field 
 
