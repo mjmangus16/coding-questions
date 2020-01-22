@@ -104,15 +104,17 @@ func testPost(w http.ResponseWriter, req *http.Request) {
 	
 }
 
+func denyAccess(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprint(w, "Im sorry but " + req.Method + " is not allowed. Please try a POST request instead.")
+}
+
 func handleRequests() {
 
-	myRouter := mux.NewRouter().StrictSlash(true)
+	myRouter := mux.NewRouter()
 
-	// Route used for testing that server is working
-	myRouter.HandleFunc("/", homePage).Methods("POST")
-
-
-	myRouter.HandleFunc("/post", testPost).Methods("POST")
+	myRouter.HandleFunc("/", testPost).Methods("POST")
+	myRouter.HandleFunc("/", denyAccess)
+	
 	log.Fatal(http.ListenAndServe(":8081", myRouter))
 
 }
@@ -120,3 +122,9 @@ func handleRequests() {
 func main() {
 	handleRequests()
 }
+
+// In regards to rejecting endpoints gracefully I wasn't able to figure out how to do this within the timelimit of 4 hrs.
+// I set up the "/" route so that it sends an error message if the route is not a POST route but i don't think that is what you are looking for.
+
+// This is my first experience with GoLang. Quite the learning curve. The majority of my experience in backend development is with Node.js.
+// This is not similar to Node.js at all so I have to admit it was a bit of a struggle piecing this all together.
