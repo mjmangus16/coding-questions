@@ -1,0 +1,16 @@
+
+*** Steps to completing code challenge ***
+
+1.  Set up a simple Go server on port 8081
+    - Write a GET request that prints to page to test the server is working
+
+2. Create a POST route that takes in a "count"
+    - Write a simple test function that gets passed into the POST route.
+        - For initial testing purposes, use the function to simply print the "count"
+
+3. Add a 1 second sleep timer to the function so that it pauses for a second before it prints the "count"
+
+4. A success message should be given once the function has completed running.
+
+At this point the basic structure of the server and challenge should be completed. Once this
+is running and has been tested we can move into figuring out the details of the challenge.
